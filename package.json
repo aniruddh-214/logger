@@ -1,0 +1,41 @@
+{
+  "name": "@aniruddh/logger",
+  "version": "0.0.1",
+  "description": "For best logging experience",
+  "main": "index.js",
+  "engineStrict": true,
+  "engines": {
+    "pnpm": ">=9.0.0",
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "prebuild": "rm -rf ./dist",
+    "build": "tsc --build ./tsconfig.json && resolve-tspaths --project ./tsconfig.json --out ./dist",
+    "start:dev": "ts-node -P ./tsconfig.json  src/index"
+  },
+  "keywords": [
+    "npm",
+    "logger",
+    "aniruddh214",
+    "aniruddh"
+  ],
+  "author": "Aniruddh Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "uuid": "^11.0.3",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/eslint": "^9.6.1",
+    "@types/node": "^22.10.1",
+    "eslint": "^9.16.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.4.2",
+    "resolve-tspaths": "^0.8.23",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.7.2"
+  }
+}
